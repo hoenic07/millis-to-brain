@@ -19,7 +19,7 @@ function toHumanReadableDate(){
   } while (m);
 
   res.forEach(v=>{
-    dateStr = moment(new Date(parseInt(v))).format("YYYY-MM-DD HH:mm:ss");   
+    dateStr = moment(new Date(parseInt(v))).utc().format("YYYY-MM-DD HH:mm:ss");   
     value = value.replace(v,`\"${dateStr} UTC\"`)
   });
 
